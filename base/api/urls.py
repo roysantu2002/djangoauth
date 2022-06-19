@@ -6,12 +6,13 @@ from rest_framework_simplejwt.views import (TokenObtainPairView,
                                             TokenRefreshView)
 
 from . import views
-from .views import ObtainTokenPairWithColorView
+from .views import HelloWorldView, ObtainTokenPairWithColorView
 
 urlpatterns = [
     path('', views.getRoutes),
     path('token/obtain/', ObtainTokenPairWithColorView.as_view(), name='token_create'),
     path('token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
+    path('hello/', HelloWorldView.as_view(), name='hello_world')
     # path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
