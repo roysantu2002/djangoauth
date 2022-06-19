@@ -15,7 +15,7 @@ class ObtainTokenPairWithColorView(TokenObtainPairView):
 @api_view(['GET'])
 def getRoutes(request):
     routes = [
-        '/api/token/obtain/',
-        '/api/token/refresh/'
+        'token/obtain',
+        'token/refresh'
     ]
     return Response(routes)
